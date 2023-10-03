@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Criação de Elementos Dinâmicos</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../bootstrap-5.3.0-dist/css/bootstrap.min.css">
+</head>
+
+<body id="corpo">
+	<div class="container mt-4">
+
+		<h1 class="text-center mb-4">Criação de Elementos Dinâmicos com JS</h1>
+
+		<!-- Modelo 1 -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Modelo 1 - Criar elementos formatados</h2>
+			<hr class="mb-4" />
+			<p>
+				Implemente uma função em JavaScript com o nome criarRetangulos() que toda a vez que o usuário clicar no
+				botão “Criar retângulos” na interface web seja criado um novo retângulo dentro da tag div com o id=
+				“retangulos”. O retângulo deve possuir:
+				1. 200px de largura;
+				2. 100px de altura;
+				3. 10px de margem;
+				4. Flutuação da esquerda para a direita;
+				5. Classe com o nome “retangulo”;
+				6. Cor #736598.
+			</p>
+			<div class="col-md-12 mt-4">
+				<button class="btn btn-success" id="criar-retangulos">Criar retângulos</button>
+				<button class="btn btn-danger" id="apagar-retangulos">Apagar retângulos</button>
+			</div>
+			<hr>
+			<div id="retangulos">
+
+			</div>
+			<hr style="clear: both">
+		</div>
+
+		<!-- Modelo 2 -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Modelo 2 - Criação de links</h2>
+			<hr class="mb-4" />
+			<p>
+				Desenvolva uma função em JavaScript chamada de criarLinks() que permita ao usuário adicionar links na
+				tela de acordo com a necessidade. O usuário irá preencher os campos com o nome do link e o endereço
+				(URL) do link. Ao clicar em “Adicionar link”, a função criada deverá adicionar um link como um item na
+				tabela com o id = “links”. O link deverá possuir o nome informado pelo usuário e ao clicar nele, ele
+				deverá redirecionar para a URL informada pelo usuário ao criar o link.
+			</p>
+			<form action="" class="row">
+				<div class="col-md-6">
+					<label for="nome-link">Nome do link:</label>
+					<input type="text" class="form-control" id="nome-link" name="nome-link" placeholder="Nome do link">
+				</div>
+				<div class="col-md-6">
+					<label for="url-link">URL do Link:</label>
+					<input type="text" class="form-control" id="url-link" name="url-link" placeholder="URL do link">
+				</div>
+			</form>
+			<div class="col-md-12 mt-4 mb-4">
+				<button class="btn btn-success" id="criar-links">Adicionar link</button>
+				<button class="btn btn-danger" id="apagar-links">Apagar todos os links</button>
+			</div>
+			<div id="notas">
+				<table class="table" id="links">
+					<thead>
+						<tr>
+							<th scope="col">Nome do Link</th>
+							<th scope="col">URL clicável</th>
+							<th scope="col">Opções</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<br>
+		</div>
+
+		<!-- Modelo 3 -->
+		<div class="container exercicio-2">
+			<hr class="mt-4" />
+			<h2>Modelo 3 - Formatar elementos já existentes</h2>
+			<hr class="mb-4" />
+			<p>
+				Construa uma função em JavaScript com o nome trocarCores() que realiza a troca das cores das formas selecionadas pelos usuários. O usuário irá selecionar uma forma e uma cor e ao clicar em “Trocar cor” a forma escolhida deverá assumir a cor selecionada pelo usuário. A troca não poderá ser feita e o usuário deverá ser alertado se o campo forma e/ou cor não forem preenchidos.
+			</p>
+			<form action="" class="row">
+				<div class="col-md-4">
+					<label for="forma">Forma:</label>
+					<select name="forma" id="forma" class="form-select">
+						<option value="">Selecione uma forma</option>
+						<option value="quadrado">Quadrado</option>
+						<option value="circulo">Círculo</option>
+						<option value="retangulo">Retângulo</option>
+					</select>
+				</div>
+				<div class="col-md-4">
+					<label for="cor">Nova cor:</label>
+					<select name="cor" id="cor" class="form-select">
+						<option value="">Selecione uma cor</option>
+						<option value="#1e824c">Verde</option>
+						<option value="#fad859">Amarelo</option>
+						<option value="#2574a9">Azul</option>
+						<option value="#d64541">Vermelho</option>
+						<option value="#f4b350">Laranja</option>
+						<option value="#bdc3c7">Cinza</option>
+					</select>
+				</div>
+			</form>
+			<div class="col-md-12 mt-4 mb-4">
+				<button class="btn btn-success" id="trocar-cor">Trocar cor</button>
+			</div>
+			<hr />
+			<div class="forma-quadrado" id="quadrado" style="background-color: black; height: 150px; width: 150px; margin: 30px; float: left;">
+			</div>
+			<div class="forma-circulo" id="circulo" style="background-color: black; height: 150px;	width: 150px; margin: 30px; float: left; border-radius: 75px;">
+			</div>
+			<div class="forma-retangulo" id="retangulo" style="background-color: black; height: 150px; width: 300px; margin: 30px; float: left;">
+			</div>
+			<br>
+		</div>
+	</div>
+
+	<script src="../js/index.js"></script>
+</body>
+
+</html>
