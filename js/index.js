@@ -1,5 +1,5 @@
 // EX 1
-function criarRetangulos(){
+function criarRetangulos() {
     let divRetangulos = document.querySelector('#retangulos');
 
     let retangulo = document.createElement('div');
@@ -13,7 +13,7 @@ function criarRetangulos(){
     divRetangulos.appendChild(retangulo);
 }
 
-function apagarRetangulos(){
+function apagarRetangulos() {
     let divRetangulos = document.querySelector('#retangulos');
     divRetangulos.innerHTML = '';
 }
@@ -24,13 +24,13 @@ document.querySelector('#apagar-retangulos').addEventListener('click', apagarRet
 
 // Ex 2
 
-function criarLinks(){
+function criarLinks() {
     let nomeLink = document.querySelector('#nome-link').value;
     let urlLink = document.querySelector('#url-link').value;
-    
-    if(nomeLink != '' && urlLink != ''){
+
+    if (nomeLink != '' && urlLink != '') {
         let corpoTabela = document.querySelector('#links tbody');
-        
+
         let novaLinha = document.createElement('tr');
 
         // coluna 1
@@ -51,9 +51,9 @@ function criarLinks(){
         botaoExcluir.textContent = 'Excluir';
         botaoExcluir.classList.add('btn');
         botaoExcluir.classList.add('btn-danger');
-        botaoExcluir.onclick = function(){
+        botaoExcluir.onclick = function () {
             corpoTabela.removeChild(novaLinha);
-        }   
+        }
         colunaOpcoes.appendChild(botaoExcluir);
 
 
@@ -62,15 +62,45 @@ function criarLinks(){
         novaLinha.appendChild(colunaOpcoes);
         corpoTabela.appendChild(novaLinha);
 
-    }else{
+    } else {
         alert('Preencha todos os campos! ');
     }
 }
 
-function apagarLinks(){
+function apagarLinks() {
     let corpoTabela = document.querySelector('#links tbody');
     corpoTabela.innerHTML = '';
 }
 
 document.querySelector('#criar-links').addEventListener('click', criarLinks);
 document.querySelector('#apagar-links').addEventListener('click', apagarLinks);
+
+// EX 3
+
+function trocarCores() {
+    let nForma = document.querySelector('#forma').value;
+    let cor = document.querySelector('#cor').value;
+
+    if (nForma != '') {
+        if (cor != '') {
+            let forma = document.querySelector(`#${nForma}`);
+            forma.style.backgroundColor = cor;
+        } else {
+            alert('Selecione uma cor!');
+        }
+    } else {
+        alert('Selecione uma forma!');
+    }
+}
+
+document.querySelector('#trocar-cor').addEventListener('click', trocarCores);
+
+/*function trocarCores(){
+    let nForma = document.querySelector('#forma').value;
+    let cor = document.querySelector('#cor').value;
+    console.log(nForma, cor);
+
+    let forma = document.querySelector('#'+nForma);
+    forma.style.backgroundColor = cor;
+}
+*/
